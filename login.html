@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="vi">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Đăng Nhập / Đăng Ký</title>
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+        />
+    </head>
+    <body class="bg-dark text-light">
+        <div
+            class="navbar navbar-expand-lg navbar-dark bg-dark mb-5 border-bottom border-secondary"
+        >
+            <div class="container">
+                <div
+                    class="navbar-brand fw-bold text-info"
+                    style="cursor: pointer"
+                    onclick="window.location.href = 'home.html'"
+                >
+                    HI-TECH GEAR
+                </div>
+                <div
+                    class="btn btn-outline-light btn-sm"
+                    onclick="window.location.href = 'home.html'"
+                >
+                    Quay lại trang chủ
+                </div>
+            </div>
+        </div>
+
+        <div class="container" style="max-width: 450px">
+            <div
+                class="card p-4 shadow-lg border border-secondary bg-dark text-light rounded-3"
+            >
+                <div id="login-box">
+                    <div class="fs-3 fw-bold text-center text-info mb-4">
+                        ĐĂNG NHẬP
+                    </div>
+
+                    <div class="mb-3">
+                        <div class="form-label small fw-bold text-secondary">
+                            Email:
+                        </div>
+                        <input
+                            type="text"
+                            id="login-email"
+                            class="form-control border-secondary"
+                            placeholder="name@gmail.com"
+                        />
+                    </div>
+
+                    <div class="mb-4">
+                        <div class="form-label small fw-bold text-secondary">
+                            Mật khẩu:
+                        </div>
+                        <input
+                            type="password"
+                            id="login-password"
+                            class="form-control border-secondary"
+                            placeholder="Nhập mật khẩu"
+                        />
+                    </div>
+
+                    <div
+                        class="btn btn-info w-100 fw-bold mb-3"
+                        onclick="handleLogin()"
+                    >
+                        ĐĂNG NHẬP
+                    </div>
+
+                    <div class="text-center small">
+                        Chưa có tài khoản?
+                        <span
+                            class="text-info fw-bold"
+                            style="cursor: pointer"
+                            onclick="toggleAuthBox()"
+                            >Đăng ký ngay</span
+                        >
+                    </div>
+                </div>
+
+                <div id="register-box" style="display: none">
+                    <div class="fs-3 fw-bold text-center text-info mb-4">
+                        ĐĂNG KÝ
+                    </div>
+
+                    <div class="mb-3">
+                        <div class="form-label small fw-bold text-secondary">
+                            Email:
+                        </div>
+                        <input
+                            type="text"
+                            id="reg-email"
+                            class="form-control border-secondary"
+                            placeholder="example@gmail.com"
+                            oninput="validateEmail()"
+                        />
+                        <div
+                            id="error-email"
+                            class="text-danger small mt-1"
+                            style="display: none"
+                        ></div>
+                    </div>
+
+                    <div class="mb-4">
+                        <div class="form-label small fw-bold text-secondary">
+                            Mật khẩu:
+                        </div>
+                        <input
+                            type="password"
+                            id="reg-password"
+                            class="form-control border-secondary"
+                            placeholder="Tối thiểu 8 ký tự"
+                            oninput="validatePassword()"
+                        />
+                        <div
+                            id="error-password"
+                            class="text-danger small mt-1"
+                            style="display: none"
+                        ></div>
+                    </div>
+
+                    <div
+                        class="btn btn-info w-100 fw-bold mb-3 text-dark"
+                        onclick="handleRegister()"
+                    >
+                        ĐĂNG KÝ TÀI KHOẢN
+                    </div>
+
+                    <div class="text-center small">
+                        Đã có tài khoản?
+                        <span
+                            class="text-info fw-bold"
+                            style="cursor: pointer"
+                            onclick="toggleAuthBox()"
+                            >Quay lại Đăng nhập</span
+                        >
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="./js/auth.js"></script>
+    </body>
+</html>

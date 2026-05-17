@@ -1,0 +1,12 @@
+.slider-img {
+    object-fit: cover !important;
+}
+
+.btn-scale:active {
+    transform: scale(0.9) !important;
+    transition: all 0.3s;
+}
+
+.btn-none-hover:hover {
+    border: none !important;
+}

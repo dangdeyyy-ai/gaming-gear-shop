@@ -1,0 +1,92 @@
+{
+    "products": [
+        {
+            "id": "1",
+            "name": "Chuột Logitech G Pro X Superlight",
+            "category": "mouse",
+            "price": 3190000,
+            "image": "https://resource.logitechg.com/w_692,c_lpad,ar_4:3,q_auto,f_auto,dpr_1.0/d_transparent.gif/content/dam/gaming/en/products/pro-x-superlight/pro-x-superlight-black-gallery-1.png?v=1",
+            "description": "Chuột chơi game không dây nhẹ nhất, nhanh nhất của Logitech."
+        },
+        {
+            "id": "2",
+            "name": "Bàn phím Akko 3068B Multi-Mode",
+            "category": "keyboard",
+            "price": 1850000,
+            "image": "https://images.unsplash.com/photo-1587829741301-dc798b83add3?q=80&w=600&auto=format&fit=crop",
+            "description": "Thiết kế nhỏ gọn, kết nối 3 chế độ tiện lợi cho nhiều thiết bị."
+        },
+        {
+            "id": "3",
+            "name": "Tai nghe HyperX Cloud II",
+            "category": "headphone",
+            "price": 2190000,
+            "image": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?q=80&w=600&auto=format&fit=crop",
+            "description": "Tai nghe gaming nổi tiếng với âm thanh vòm 7.1 và microphone chống ồn."
+        },
+        {
+            "id": "4",
+            "name": "Chuột Razer DeathAdder V3",
+            "category": "mouse",
+            "price": 2590000,
+            "image": "https://images.unsplash.com/photo-1615663245857-ac93bb7c39e7?q=80&w=600&auto=format&fit=crop",
+            "description": "Chuột gaming công thái học với cảm biến cực kỳ chính xác."
+        },
+        {
+            "id": "5",
+            "name": "Bàn phím Keychron K8 Wireless",
+            "category": "keyboard",
+            "price": 2390000,
+            "image": "https://images.unsplash.com/photo-1511467687858-23d96c32e4ae?q=80&w=600&auto=format&fit=crop",
+            "description": "Bàn phím cơ không dây hỗ trợ MacOS và Windows cực kỳ linh hoạt."
+        },
+        {
+            "id": "6",
+            "name": "Tai nghe SteelSeries Arctis 7",
+            "category": "headphone",
+            "price": 3490000,
+            "image": "https://images.unsplash.com/photo-1484704849700-f032a568e944?q=80&w=600&auto=format&fit=crop",
+            "description": "Tai nghe wireless gaming với âm thanh chi tiết và pin lâu."
+        },
+        {
+            "id": "7",
+            "name": "Chuột Logitech G502 Hero",
+            "category": "mouse",
+            "price": 1490000,
+            "image": "https://images.unsplash.com/photo-1527814050087-3793815479db?q=80&w=600&auto=format&fit=crop",
+            "description": "Chuột gaming nổi tiếng với nhiều nút macro và cảm biến HERO."
+        },
+        {
+            "id": "8",
+            "name": "Bàn phím Royal Kludge RK84",
+            "category": "keyboard",
+            "price": 1650000,
+            "image": "https://images.unsplash.com/photo-1618384887929-16ec33fab9ef?q=80&w=600&auto=format&fit=crop",
+            "description": "Bàn phím cơ compact 84 phím với LED RGB nổi bật."
+        },
+        {
+            "id": "9",
+            "name": "Tai nghe Razer BlackShark V2",
+            "category": "headphone",
+            "price": 2790000,
+            "image": "https://images.unsplash.com/photo-1546435770-a3e426bf472b?q=80&w=600&auto=format&fit=crop",
+            "description": "Tai nghe esports với microphone HyperClear và âm thanh THX Spatial."
+        }
+    ],
+    "users": [
+        {
+            "email": "dangdeyyy@gmail.com",
+            "password": "lkd18122007@@",
+            "role": "admin",
+            "id": "ycFDiEXPLi0"
+        },
+        {
+            "email": "dle181227@gmail .com",
+            "password": "lkd18122007@@",
+            "role": "user",
+            "id": "LoXsEtGkeNc"
+        }
+    ],
+    "orders": [],
+    "$schema": "./node_modules/json-server/schema.json"
+}
