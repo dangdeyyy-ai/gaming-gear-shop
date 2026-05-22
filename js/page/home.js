@@ -39,27 +39,38 @@ document.addEventListener("DOMContentLoaded", () => {
     const btnPrev = document.getElementById("slide-prev");
     const btnNext = document.getElementById("slide-next");
 
-    let currentTranslate = 0;
-    const scrollAmount = 300;
+    if (!track) return;
+
+    let currentProductIndex = 0;
+    const scrollAmount = 384;
+
+    function updateProductSlider() {
+        track.style.transform = `translateX(-${currentProductIndex * scrollAmount}px)`;
+    }
 
     if (btnNext) {
         btnNext.addEventListener("click", () => {
-            const trackWidth = track.scrollWidth;
-            const containerWidth = track.parentElement.clientWidth;
+            const totalItems = track.querySelectorAll(".col").length;
+            const maxIndex = totalItems - 3;
 
-            if (Math.abs(currentTranslate) < trackWidth - containerWidth) {
-                currentTranslate -= scrollAmount;
-                track.style.transform = `translateX(${currentTranslate}px)`;
+            currentProductIndex++;
+            if (currentProductIndex > (maxIndex > 0 ? maxIndex : 0)) {
+                currentProductIndex = 0;
             }
+            updateProductSlider();
         });
     }
 
     if (btnPrev) {
         btnPrev.addEventListener("click", () => {
-            if (currentTranslate < 0) {
-                currentTranslate += scrollAmount;
-                track.style.transform = `translateX(${currentTranslate}px)`;
+            const totalItems = track.querySelectorAll(".col").length;
+            const maxIndex = totalItems - 3;
+
+            currentProductIndex--;
+            if (currentProductIndex < 0) {
+                currentProductIndex = maxIndex > 0 ? maxIndex : 0;
             }
+            updateProductSlider();
         });
     }
 });

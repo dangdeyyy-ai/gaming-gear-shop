@@ -1,4 +1,3 @@
-const PRODUCTS_API = "http://localhost:3000/products";
 let allProducts = [];
 
 let currentPage = 1;
@@ -6,7 +5,7 @@ const rowsPerPage = 5;
 
 async function fetchAdminProducts() {
     try {
-        const response = await fetch(PRODUCTS_API);
+        const response = await fetch("http://localhost:3000/products");
         if (!response.ok) throw new Error("Không thể kết nối tới server");
 
         allProducts = await response.json();

@@ -12,7 +12,7 @@
     </head>
     <body class="bg-dark text-light">
         <div
-            class="navbar navbar-expand-lg navbar-dark bg-dark mb-4 border-bottom border-secondary"
+            class="navbar navbar-expand-md navbar-dark bg-dark mb-4 border-bottom border-secondary"
         >
             <div class="container">
                 <div
@@ -22,50 +22,77 @@
                 >
                     USIDE-TECH GEAR
                 </div>
-                <div
-                    class="navbar-nav me-auto mb-2 mb-lg-0 d-flex flex-row gap-3 ms-3"
+
+                <button
+                    class="navbar-toggler"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navbarContent"
+                    aria-controls="navbarContent"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation"
                 >
-                    <a
-                        class="nav-link fw-bold"
-                        id="nav-home"
-                        href="home.html"
-                        style="cursor: pointer"
-                        >Trang Chủ</a
-                    >
-                    <a
-                        class="nav-link fw-bold"
-                        id="nav-products"
-                        href="product.html"
-                        style="cursor: pointer"
-                        >Sản Phẩm</a
-                    >
-                </div>
-                <div class="d-flex align-items-center gap-2">
-                    <div id="login-btn-zone">
-                        <div
-                            class="btn btn-outline-light btn-sm"
-                            onclick="window.location.href = 'login.html'"
-                        >
-                            Đăng nhập
-                        </div>
-                    </div>
+                    <span class="navbar-toggler-icon"></span>
+                </button>
 
-                    <div id="logout-btn-zone" style="display: none">
-                        <div
-                            class="btn btn-outline-danger btn-sm"
-                            onclick="logoutPublic()"
-                        >
-                            Đăng xuất
-                        </div>
-                    </div>
-
+                <div class="collapse navbar-collapse" id="navbarContent">
                     <div
-                        id="admin-btn"
-                        class="btn btn-info btn-sm"
-                        style="display: none"
-                        onclick="window.location.href = 'admin.html'"
+                        class="navbar-nav me-auto mb-2 mb-md-0 d-flex flex-column flex-md-row gap-2 gap-md-3 ms-md-3 mt-3 mt-md-0"
                     >
-                        Admin
+                        <a
+                            class="nav-link fw-bold"
+                            id="nav-home"
+                            href="home.html"
+                            >Trang Chủ</a
+                        >
+                        <a
+                            class="nav-link fw-bold"
+                            id="nav-products"
+                            href="product.html"
+                            >Sản Phẩm</a
+                        >
+                    </div>
+                    <div
+                        class="d-flex align-items-md-center align-items-start flex-column flex-md-row gap-2 pt-2 pt-md-0 border-secondary border-md-0"
+                    >
+                        <div id="login-btn-zone" class="w-100 w-md-auto">
+                            <button
+                                class="btn btn-outline-light btn-sm w-100 text-nowrap"
+                                style="min-width: 100px; height: 38px"
+                                onclick="window.location.href = 'login.html'"
+                            >
+                                Đăng nhập
+                            </button>
+                        </div>
+
+                        <div
+                            id="logout-btn-zone"
+                            class="w-100 w-md-auto"
+                            style="display: none"
+                        >
+                            <button
+                                class="btn btn-outline-danger btn-sm w-100 text-nowrap"
+                                style="min-width: 100px; height: 38px"
+                                onclick="logoutPublic()"
+                            >
+                                Đăng xuất
+                            </button>
+                        </div>
+
+                        <div id="admin-btn-zone" class="w-100 w-md-auto">
+                            <button
+                                id="admin-btn"
+                                class="btn btn-info btn-sm w-100 text-nowrap"
+                                style="
+                                    display: none;
+                                    min-width: 100px;
+                                    height: 38px;
+                                "
+                                onclick="window.location.href = 'admin.html'"
+                            >
+                                Admin
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -90,9 +117,9 @@
 
         <div class="container my-5">
             <div
-                class="d-flex justify-content-between align-items-center p-4 p-md-5 rounded-3 border border-secondary bg-black bg-opacity-50 shadow-lg"
+                class="d-flex flex-column p-4 p-md-5 rounded-3 border border-secondary bg-black bg-opacity-50 shadow-lg gap-4"
             >
-                <div class="col-lg-5">
+                <div class="w-100">
                     <span class="badge bg-info text-dark fw-bold mb-2"
                         >WELCOME TO USIDE-TECH GEAR</span
                     >
@@ -100,7 +127,10 @@
                         Đánh Thức <span class="text-info">Bản Lĩnh</span> Game
                         Thủ
                     </h1>
-                    <p class="text-secondary mb-4" style="line-height: 1.8">
+                    <p
+                        class="text-secondary mb-0 section-desc"
+                        style="line-height: 1.8"
+                    >
                         Chào mừng bạn đến với USIDE-TECH GEAR – Không gian mua
                         sắm vũ khí công nghệ đỉnh cao dành riêng cho các chiến
                         thần e-Sports. Chúng tôi chuyên cung cấp Chuột Gaming
@@ -111,68 +141,55 @@
                     </p>
                 </div>
 
-                <div class="col-lg-5">
-                    <div class="row row-cols-1 row-cols-sm-2 g-3">
-                        <div class="col w-100">
+                <div class="w-100 mt-2">
+                    <div class="row row-cols-1 row-cols-md-3 g-3">
+                        <div class="col">
                             <div
-                                class="p-3 rounded-3 bg-dark border border-secondary d-flex align-items-center gap-3 h-100"
-                                style="transition: transform 0.3s"
-                                onmouseover="
-                                    this.style.transform = 'translateY(-5px)'
-                                "
-                                onmouseout="
-                                    this.style.transform = 'translateY(0)'
-                                "
+                                class="info-card p-3 rounded-3 bg-dark border border-secondary d-flex align-items-center gap-3 h-100"
                             >
                                 <div>
-                                    <div class="fw-bold text-light small">
+                                    <div
+                                        class="card-title fw-bold text-info mb-1"
+                                    >
                                         100% CHÍNH HÃNG
                                     </div>
-                                    <div class="small">
+                                    <div class="card-text text-secondary">
                                         Cam kết đền tiền gấp 10 lần nếu phát
                                         hiện hàng giả, hàng nhái.
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col w-100">
+
+                        <div class="col">
                             <div
-                                class="p-3 rounded-3 bg-dark border border-secondary d-flex align-items-center gap-3 h-100"
-                                style="transition: transform 0.3s"
-                                onmouseover="
-                                    this.style.transform = 'translateY(-5px)'
-                                "
-                                onmouseout="
-                                    this.style.transform = 'translateY(0)'
-                                "
+                                class="info-card p-3 rounded-3 bg-dark border border-secondary d-flex align-items-center gap-3 h-100"
                             >
                                 <div>
-                                    <div class="fw-bold text-light small">
+                                    <div
+                                        class="card-title fw-bold text-info mb-1"
+                                    >
                                         BẢO HÀNH SIÊU TỐC
                                     </div>
-                                    <div class="small">
+                                    <div class="card-text text-secondary">
                                         Đổi mới 1-1 trong vòng 30 ngày đầu nếu
                                         phát hiện lỗi phần cứng do nhà sản xuất.
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col w-100">
+
+                        <div class="col">
                             <div
-                                class="p-3 rounded-3 bg-dark border border-secondary d-flex align-items-center gap-3 h-100"
-                                style="transition: transform 0.3s"
-                                onmouseover="
-                                    this.style.transform = 'translateY(-5px)'
-                                "
-                                onmouseout="
-                                    this.style.transform = 'translateY(0)'
-                                "
+                                class="info-card p-3 rounded-3 bg-dark border border-secondary d-flex align-items-center gap-3 h-100"
                             >
                                 <div>
-                                    <div class="fw-bold text-light small">
+                                    <div
+                                        class="card-title fw-bold text-info mb-1"
+                                    >
                                         SHIP HỎA TỐC 2H
                                     </div>
-                                    <div class="small">
+                                    <div class="card-text text-secondary">
                                         Nhận hàng ngay trong vòng 2 tiếng đối
                                         với các khu vực nội thành.
                                     </div>
@@ -347,7 +364,7 @@
                     </div>
                 </div>
             </div>
-        </footer>
+        </div>
 
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
         <script src="./js/auth.js"></script>
